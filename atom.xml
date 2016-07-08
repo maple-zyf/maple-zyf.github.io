@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maple-zyf.github.io/"/>
-  <updated>2016-07-07T06:22:53.000Z</updated>
+  <updated>2016-07-08T11:34:50.243Z</updated>
   <id>http://maple-zyf.github.io/</id>
   
   <author>
@@ -16,259 +16,96 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>用外接鼠标的插拨来自动禁启用触摸板</title>
     <link href="http://maple-zyf.github.io/2016/07/07/touchpadDisable-Note/"/>
     <id>http://maple-zyf.github.io/2016/07/07/touchpadDisable-Note/</id>
-    <published>2016-07-07T10:26:38.117Z</published>
-    <updated>2016-07-07T06:22:53.000Z</updated>
+    <published>2016-07-06T16:00:00.000Z</published>
+    <updated>2016-07-08T11:34:50.243Z</updated>
     
-    <content type="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
-&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;zh_cn&quot; xml:lang=&quot;zh_cn&quot;&gt;
-&lt;head&gt;
-&lt;!-- 2016-07-07 Thu 14:22 --&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-&lt;title&gt;用外接鼠标的插拨来自动禁启用触摸板&lt;/title&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Org-mode&quot;&gt;
-&lt;meta name=&quot;author&quot; content=&quot;maple&quot;&gt;
-&lt;style type=&quot;text/css&quot;&gt;
- &lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: &#39;sh&#39;; }
-  pre.src-bash:before  { content: &#39;sh&#39;; }
-  pre.src-emacs-lisp:before { content: &#39;Emacs Lisp&#39;; }
-  pre.src-R:before     { content: &#39;R&#39;; }
-  pre.src-perl:before  { content: &#39;Perl&#39;; }
-  pre.src-java:before  { content: &#39;Java&#39;; }
-  pre.src-sql:before   { content: &#39;SQL&#39;; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  /*]]&gt;*/--&gt;
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = &quot;code-highlighted&quot;;
-     elem.className   = &quot;code-highlighted&quot;;
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]&gt;*///--&gt;
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;content&quot;&gt;
-&lt;h1 class=&quot;title&quot;&gt;用外接鼠标的插拨来自动禁启用触摸板&lt;/h1&gt;
-&lt;div id=&quot;table-of-contents&quot;&gt;
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;div id=&quot;text-table-of-contents&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline1&quot;&gt;1. TouchPad Problems&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline2&quot;&gt;2. Conception&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline7&quot;&gt;3. Hacking TouchPad En/Disable with Mouse&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline3&quot;&gt;3.1. gdm登陆页面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline4&quot;&gt;3.2. gnome3桌面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline5&quot;&gt;3.3. 用鼠标插拨事件来禁/启用触摸板&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline6&quot;&gt;3.4. 系统从休眠中唤醒时刷新触摸板状态&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#orgheadline8&quot;&gt;4. Done !&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgheadline1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; TouchPad Problems&lt;/h2&gt;
+    <content type="html">
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; TouchPad Problems&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
 &lt;p&gt;
-   debian下每次开机触摸板都是默认开启的，虽然可以设置&quot;disable while typing&quot;
-但是总有误触的情况，xinput可以在软件层拦截事件来禁用触摸板．为了方便google到了
-一个可以根据外接鼠标插拨事件来自动控制触摸板的方法．我的桌面环境为debian8, gnome3.
+   debian&amp;#x4E0B;&amp;#x6BCF;&amp;#x6B21;&amp;#x5F00;&amp;#x673A;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x90FD;&amp;#x662F;&amp;#x9ED8;&amp;#x8BA4;&amp;#x5F00;&amp;#x542F;&amp;#x7684;&amp;#xFF0C;&amp;#x867D;&amp;#x7136;&amp;#x53EF;&amp;#x4EE5;&amp;#x8BBE;&amp;#x7F6E;&amp;quot;disable while typing&amp;quot;
+&amp;#x4F46;&amp;#x662F;&amp;#x603B;&amp;#x6709;&amp;#x8BEF;&amp;#x89E6;&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#xFF0C;xinput&amp;#x53EF;&amp;#x4EE5;&amp;#x5728;&amp;#x8F6F;&amp;#x4EF6;&amp;#x5C42;&amp;#x62E6;&amp;#x622A;&amp;#x4E8B;&amp;#x4EF6;&amp;#x6765;&amp;#x7981;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#xFF0E;&amp;#x4E3A;&amp;#x4E86;&amp;#x65B9;&amp;#x4FBF;google&amp;#x5230;&amp;#x4E86;
+&amp;#x4E00;&amp;#x4E2A;&amp;#x53EF;&amp;#x4EE5;&amp;#x6839;&amp;#x636E;&amp;#x5916;&amp;#x63A5;&amp;#x9F20;&amp;#x6807;&amp;#x63D2;&amp;#x62E8;&amp;#x4E8B;&amp;#x4EF6;&amp;#x6765;&amp;#x81EA;&amp;#x52A8;&amp;#x63A7;&amp;#x5236;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#xFF0E;&amp;#x6211;&amp;#x7684;&amp;#x684C;&amp;#x9762;&amp;#x73AF;&amp;#x5883;&amp;#x4E3A;debian8, gnome3.
 &lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div id=&quot;outline-container-orgheadline2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgheadline2&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2&lt;/span&gt; Conception&lt;/h2&gt;
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2&lt;/span&gt; Conception&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
 &lt;p&gt;
-先查看输入设备：
+&amp;#x5148;&amp;#x67E5;&amp;#x770B;&amp;#x8F93;&amp;#x5165;&amp;#x8BBE;&amp;#x5907;&amp;#xFF1A;
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 bogwon@bogwon-desktop ~ $ xinput -list
-⎡ Virtual core pointer                       id=2   [master pointer  (3)]
-⎜   ↳ Virtual core XTEST pointer             id=4   [slave  pointer  (2)]
-⎜   ↳ USB Optical Mouse                      id=14  [slave  pointer  (2)]
-⎣ Virtual core keyboard                      id=3   [master keyboard (2)]
-    ↳ Virtual core XTEST keyboard            id=5   [slave  keyboard (3)]
+&amp;#x23A1; Virtual core pointer                       id=2   [master pointer  (3)]
+&amp;#x239C;   &amp;#x21B3; Virtual core XTEST pointer             id=4   [slave  pointer  (2)]
+&amp;#x239C;   &amp;#x21B3; USB Optical Mouse                      id=14  [slave  pointer  (2)]
+&amp;#x23A3; Virtual core keyboard                      id=3   [master keyboard (2)]
+    &amp;#x21B3; Virtual core XTEST keyboard            id=5   [slave  keyboard (3)]
 &lt;/pre&gt;
 &lt;p&gt;
-可以看出电脑的pointer(鼠标)有两个：
+&amp;#x53EF;&amp;#x4EE5;&amp;#x770B;&amp;#x51FA;&amp;#x7535;&amp;#x8111;&amp;#x7684;pointer(&amp;#x9F20;&amp;#x6807;)&amp;#x6709;&amp;#x4E24;&amp;#x4E2A;&amp;#xFF1A;
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 Virtual core XTEST pointer  id=2
 USB Optical Mouse           id=14
 &lt;/pre&gt;
 &lt;p&gt;
-这个 &lt;b&gt;USB Optical Mouse&lt;/b&gt; 就是外接鼠标啦, 
-我们要找的自然就是 &lt;b&gt;Virtual core XTEST poin&lt;/b&gt; 他的 &lt;b&gt;id=4&lt;/b&gt; .
+&amp;#x8FD9;&amp;#x4E2A; &lt;b&gt;USB Optical Mouse&lt;/b&gt; &amp;#x5C31;&amp;#x662F;&amp;#x5916;&amp;#x63A5;&amp;#x9F20;&amp;#x6807;&amp;#x5566;, 
+&amp;#x6211;&amp;#x4EEC;&amp;#x8981;&amp;#x627E;&amp;#x7684;&amp;#x81EA;&amp;#x7136;&amp;#x5C31;&amp;#x662F; &lt;b&gt;Virtual core XTEST poin&lt;/b&gt; &amp;#x4ED6;&amp;#x7684; &lt;b&gt;id=4&lt;/b&gt; .
 &lt;/p&gt;
 
 &lt;p&gt;
-现在用xinput list-props来看它的详细信息.　=可以用名字，也可以用id=
+&amp;#x73B0;&amp;#x5728;&amp;#x7528;xinput list-props&amp;#x6765;&amp;#x770B;&amp;#x5B83;&amp;#x7684;&amp;#x8BE6;&amp;#x7EC6;&amp;#x4FE1;&amp;#x606F;.&amp;#x3000;=&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;&amp;#x540D;&amp;#x5B57;&amp;#xFF0C;&amp;#x4E5F;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;id=
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 bogwon@bogwon-desktop ~ $ xinput list-props 4         
-Device &#39;ETPS/2 Elantech Touchpad&#39;:
+Device &amp;apos;ETPS/2 Elantech Touchpad&amp;apos;:
 	Device Enabled (135):	1
 	Coordinate Transformation Matrix (137):	1.000000, 0.000000,
   ... ...
 &lt;/pre&gt;
 &lt;p&gt;
-注意看 &lt;span class=&quot;underline&quot;&gt;Device Enabled (135):  1&lt;/span&gt; 表示触摸板是被启用的
-试试禁用它：
+&amp;#x6CE8;&amp;#x610F;&amp;#x770B; &lt;span class=&quot;underline&quot;&gt;Device Enabled (135):        1&lt;/span&gt; &amp;#x8868;&amp;#x793A;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x662F;&amp;#x88AB;&amp;#x542F;&amp;#x7528;&amp;#x7684;
+&amp;#x8BD5;&amp;#x8BD5;&amp;#x7981;&amp;#x7528;&amp;#x5B83;&amp;#xFF1A;
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
-//这两条命令是一个意思
-bogwon@bogwon-desktop ~ $ xinput set-prop 4 &#39;Device Enabled&#39; 0  
-                                      #通过设备编号+属性名禁用触摸板
+//&amp;#x8FD9;&amp;#x4E24;&amp;#x6761;&amp;#x547D;&amp;#x4EE4;&amp;#x662F;&amp;#x4E00;&amp;#x4E2A;&amp;#x610F;&amp;#x601D;
+bogwon@bogwon-desktop ~ $ xinput set-prop 4 &amp;apos;Device Enabled&amp;apos; 0  
+                                      #&amp;#x901A;&amp;#x8FC7;&amp;#x8BBE;&amp;#x5907;&amp;#x7F16;&amp;#x53F7;+&amp;#x5C5E;&amp;#x6027;&amp;#x540D;&amp;#x7981;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;
 bogwon@bogwon-desktop ~ $ xinput set-prop 4 135 0               
-                                      #通过设备编号+属性编号来设置
-//查看现在的状态
+                                      #&amp;#x901A;&amp;#x8FC7;&amp;#x8BBE;&amp;#x5907;&amp;#x7F16;&amp;#x53F7;+&amp;#x5C5E;&amp;#x6027;&amp;#x7F16;&amp;#x53F7;&amp;#x6765;&amp;#x8BBE;&amp;#x7F6E;
+//&amp;#x67E5;&amp;#x770B;&amp;#x73B0;&amp;#x5728;&amp;#x7684;&amp;#x72B6;&amp;#x6001;
 bogwon@bogwon-desktop ~ $ xinput list-props 4             
-Device &#39;ETPS/2 Elantech Touchpad&#39;:
-	Device Enabled (135):	0             #变成了0，表示禁用
+Device &amp;apos;ETPS/2 Elantech Touchpad&amp;apos;:
+	Device Enabled (135):	0             #&amp;#x53D8;&amp;#x6210;&amp;#x4E86;0&amp;#xFF0C;&amp;#x8868;&amp;#x793A;&amp;#x7981;&amp;#x7528;
 	Coordinate Transformation Matrix (137):	1.000000, 0.000000,
   ... ...
 &lt;/pre&gt;
 &lt;p&gt;
-现在你的触摸板是不是已经不能用了. ^O^
+&amp;#x73B0;&amp;#x5728;&amp;#x4F60;&amp;#x7684;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x662F;&amp;#x4E0D;&amp;#x662F;&amp;#x5DF2;&amp;#x7ECF;&amp;#x4E0D;&amp;#x80FD;&amp;#x7528;&amp;#x4E86;. ^O^
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgheadline7&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgheadline7&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3&lt;/span&gt; Hacking TouchPad En/Disable with Mouse&lt;/h2&gt;
+&lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3&lt;/span&gt; Hacking TouchPad En/Disable with Mouse&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
 &lt;p&gt;
-要让触摸板在任何时候都受鼠标控制，有三个方面需要考虑．
-&lt;code&gt;所有测试都是一个外接鼠标的情况,穷屌丝只有一个鼠标额&lt;/code&gt;
+&amp;#x8981;&amp;#x8BA9;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x5728;&amp;#x4EFB;&amp;#x4F55;&amp;#x65F6;&amp;#x5019;&amp;#x90FD;&amp;#x53D7;&amp;#x9F20;&amp;#x6807;&amp;#x63A7;&amp;#x5236;&amp;#xFF0C;&amp;#x6709;&amp;#x4E09;&amp;#x4E2A;&amp;#x65B9;&amp;#x9762;&amp;#x9700;&amp;#x8981;&amp;#x8003;&amp;#x8651;&amp;#xFF0E;
+&lt;code&gt;&amp;#x6240;&amp;#x6709;&amp;#x6D4B;&amp;#x8BD5;&amp;#x90FD;&amp;#x662F;&amp;#x4E00;&amp;#x4E2A;&amp;#x5916;&amp;#x63A5;&amp;#x9F20;&amp;#x6807;&amp;#x7684;&amp;#x60C5;&amp;#x51B5;,&amp;#x7A77;&amp;#x5C4C;&amp;#x4E1D;&amp;#x53EA;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x9F20;&amp;#x6807;&amp;#x989D;&lt;/code&gt;
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgheadline3&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgheadline3&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.1&lt;/span&gt; gdm登陆页面&lt;/h3&gt;
+&lt;div id=&quot;outline-container-sec-3-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-1&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.1&lt;/span&gt; gdm&amp;#x767B;&amp;#x9646;&amp;#x9875;&amp;#x9762;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
 &lt;p&gt;
-   开机后(进入gdm登陆界面时)根据是否有外接鼠标来控制一次触摸板状态．
-方法是把下面部分代码添加到 /etc/gdm/Init/Default 的 &#39;exit 0&#39; 之前．
+   &amp;#x5F00;&amp;#x673A;&amp;#x540E;(&amp;#x8FDB;&amp;#x5165;gdm&amp;#x767B;&amp;#x9646;&amp;#x754C;&amp;#x9762;&amp;#x65F6;)&amp;#x6839;&amp;#x636E;&amp;#x662F;&amp;#x5426;&amp;#x6709;&amp;#x5916;&amp;#x63A5;&amp;#x9F20;&amp;#x6807;&amp;#x6765;&amp;#x63A7;&amp;#x5236;&amp;#x4E00;&amp;#x6B21;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x72B6;&amp;#x6001;&amp;#xFF0E;
+&amp;#x65B9;&amp;#x6CD5;&amp;#x662F;&amp;#x628A;&amp;#x4E0B;&amp;#x9762;&amp;#x90E8;&amp;#x5206;&amp;#x4EE3;&amp;#x7801;&amp;#x6DFB;&amp;#x52A0;&amp;#x5230; /etc/gdm/Init/Default &amp;#x7684; &amp;apos;exit 0&amp;apos; &amp;#x4E4B;&amp;#x524D;&amp;#xFF0E;
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 #disable touchpad if more than one mouse is available
@@ -277,27 +114,27 @@ if [ `ls -d /sys/class/input/mouse* | wc -l` -gt 1 ]; then
 fi
 &lt;/pre&gt;
 &lt;p&gt;
-这一句要注意：if [ `ls -d /sys/class/input/mouse* | wc -l` -gt 1 ]; then
-懂点shell-script的就能看懂了，ls 列出了系统中的mouse; wc -l是数行数.
-也就是　if [ 行数(鼠标数) great than 1 ]; then
+&amp;#x8FD9;&amp;#x4E00;&amp;#x53E5;&amp;#x8981;&amp;#x6CE8;&amp;#x610F;&amp;#xFF1A;if [ `ls -d /sys/class/input/mouse* | wc -l` -gt 1 ]; then
+&amp;#x61C2;&amp;#x70B9;shell-script&amp;#x7684;&amp;#x5C31;&amp;#x80FD;&amp;#x770B;&amp;#x61C2;&amp;#x4E86;&amp;#xFF0C;ls &amp;#x5217;&amp;#x51FA;&amp;#x4E86;&amp;#x7CFB;&amp;#x7EDF;&amp;#x4E2D;&amp;#x7684;mouse; wc -l&amp;#x662F;&amp;#x6570;&amp;#x884C;&amp;#x6570;.
+&amp;#x4E5F;&amp;#x5C31;&amp;#x662F;&amp;#x3000;if [ &amp;#x884C;&amp;#x6570;(&amp;#x9F20;&amp;#x6807;&amp;#x6570;) great than 1 ]; then
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgheadline4&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgheadline4&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.2&lt;/span&gt; gnome3桌面&lt;/h3&gt;
+&lt;div id=&quot;outline-container-sec-3-2&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-2&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.2&lt;/span&gt; gnome3&amp;#x684C;&amp;#x9762;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
 &lt;p&gt;
-   由gmd进入gnome3后发现触摸板居然又能用了，这个时的解决方法是用autostart自启动项．
-先创建~/disableTouchpad.sh  内容如下:
+   &amp;#x7531;gmd&amp;#x8FDB;&amp;#x5165;gnome3&amp;#x540E;&amp;#x53D1;&amp;#x73B0;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x5C45;&amp;#x7136;&amp;#x53C8;&amp;#x80FD;&amp;#x7528;&amp;#x4E86;&amp;#xFF0C;&amp;#x8FD9;&amp;#x4E2A;&amp;#x65F6;&amp;#x7684;&amp;#x89E3;&amp;#x51B3;&amp;#x65B9;&amp;#x6CD5;&amp;#x662F;&amp;#x7528;autostart&amp;#x81EA;&amp;#x542F;&amp;#x52A8;&amp;#x9879;&amp;#xFF0E;
+&amp;#x5148;&amp;#x521B;&amp;#x5EFA;~/disableTouchpad.sh  &amp;#x5185;&amp;#x5BB9;&amp;#x5982;&amp;#x4E0B;:
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 #!/bin/bash  
 if [ `ls -d /sys/class/input/mouse* | wc -l` -gt 1 ]; then
-	/usr/bin/xinput --set-prop &#39;ETPS/2 Elantech Touchpad&#39; &#39;Device Enabled&#39; 0
+	/usr/bin/xinput --set-prop &amp;apos;ETPS/2 Elantech Touchpad&amp;apos; &amp;apos;Device Enabled&amp;apos; 0
 fi
 &lt;/pre&gt;
 &lt;p&gt;
-再在~/.config/autostart/下创建一个启动器disableTouchpad.desktop文件，内容如下
+&amp;#x518D;&amp;#x5728;~/.config/autostart/&amp;#x4E0B;&amp;#x521B;&amp;#x5EFA;&amp;#x4E00;&amp;#x4E2A;&amp;#x542F;&amp;#x52A8;&amp;#x5668;disableTouchpad.desktop&amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x5185;&amp;#x5BB9;&amp;#x5982;&amp;#x4E0B;
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 [Desktop Entry]
@@ -308,51 +145,51 @@ NoDisplay=yes
 X-GNOME-Autostart-enabled=true
 Name[zh_CN]=touchpad disable
 Name=touchpad disable
-Comment[zh_CN]=禁用触摸板
-Comment=禁用触摸板
+Comment[zh_CN]=&amp;#x7981;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;
+Comment=&amp;#x7981;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgheadline5&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgheadline5&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.3&lt;/span&gt; 用鼠标插拨事件来禁/启用触摸板&lt;/h3&gt;
+&lt;div id=&quot;outline-container-sec-3-3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-3&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.3&lt;/span&gt; &amp;#x7528;&amp;#x9F20;&amp;#x6807;&amp;#x63D2;&amp;#x62E8;&amp;#x4E8B;&amp;#x4EF6;&amp;#x6765;&amp;#x7981;/&amp;#x542F;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-3&quot;&gt;
 &lt;p&gt;
-在系统规则中为触摸板添加一条规则命名为 /etc/udev/rules.d/61-touchpad.rules
+&amp;#x5728;&amp;#x7CFB;&amp;#x7EDF;&amp;#x89C4;&amp;#x5219;&amp;#x4E2D;&amp;#x4E3A;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x6DFB;&amp;#x52A0;&amp;#x4E00;&amp;#x6761;&amp;#x89C4;&amp;#x5219;&amp;#x547D;&amp;#x540D;&amp;#x4E3A; /etc/udev/rules.d/61-touchpad.rules
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 # 61-touchpad.rules
 
 # disable PS/2 touchpad on DISPLAY :0 if a mouse is added to the system
-  ACTION==&quot;add&quot;, SUBSYSTEM==&quot;input&quot;, ENV{ID_INPUT_MOUSE}==&quot;1&quot;, \
-       RUN+=&quot;/bin/sh -c &#39;DISPLAY=:0 /usr/bin/xinput --set-prop \
-       ETPS/2\ Elantech\ Touchpad Device\ Enabled 0&#39;&quot;
+  ACTION==&amp;quot;add&amp;quot;, SUBSYSTEM==&amp;quot;input&amp;quot;, ENV{ID_INPUT_MOUSE}==&amp;quot;1&amp;quot;, \
+       RUN+=&amp;quot;/bin/sh -c &amp;apos;DISPLAY=:0 /usr/bin/xinput --set-prop \
+       ETPS/2\ Elantech\ Touchpad Device\ Enabled 0&amp;apos;&amp;quot;
 
 # enable PS/2 touchpad on DISPLAY :0 if a mouse is removed from the system
-  ACTION==&quot;remove&quot;, SUBSYSTEM==&quot;input&quot;, ENV{ID_INPUT_MOUSE}==&quot;1&quot;, \
-       RUN+=&quot;/bin/sh -c &#39;DISPLAY=:0 /usr/bin/xinput --set-prop    \
-       ETPS/2\ Elantech\ Touchpad Device\ Enabled 1&#39;&quot;
+  ACTION==&amp;quot;remove&amp;quot;, SUBSYSTEM==&amp;quot;input&amp;quot;, ENV{ID_INPUT_MOUSE}==&amp;quot;1&amp;quot;, \
+       RUN+=&amp;quot;/bin/sh -c &amp;apos;DISPLAY=:0 /usr/bin/xinput --set-prop    \
+       ETPS/2\ Elantech\ Touchpad Device\ Enabled 1&amp;apos;&amp;quot;
 &lt;/pre&gt;
 &lt;p&gt;
-这个脚本定义了两个action, 分别在外接鼠标&quot;add&quot;和＂remove&quot;时，执行RUN参数后xinput
-命令来管理触摸板．想了解更多可以看rules.d的官方文档．
+&amp;#x8FD9;&amp;#x4E2A;&amp;#x811A;&amp;#x672C;&amp;#x5B9A;&amp;#x4E49;&amp;#x4E86;&amp;#x4E24;&amp;#x4E2A;action, &amp;#x5206;&amp;#x522B;&amp;#x5728;&amp;#x5916;&amp;#x63A5;&amp;#x9F20;&amp;#x6807;&amp;quot;add&amp;quot;&amp;#x548C;&amp;#xFF02;remove&amp;quot;&amp;#x65F6;&amp;#xFF0C;&amp;#x6267;&amp;#x884C;RUN&amp;#x53C2;&amp;#x6570;&amp;#x540E;xinput
+&amp;#x547D;&amp;#x4EE4;&amp;#x6765;&amp;#x7BA1;&amp;#x7406;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#xFF0E;&amp;#x60F3;&amp;#x4E86;&amp;#x89E3;&amp;#x66F4;&amp;#x591A;&amp;#x53EF;&amp;#x4EE5;&amp;#x770B;rules.d&amp;#x7684;&amp;#x5B98;&amp;#x65B9;&amp;#x6587;&amp;#x6863;&amp;#xFF0E;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgheadline6&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orgheadline6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.4&lt;/span&gt; 系统从休眠中唤醒时刷新触摸板状态&lt;/h3&gt;
+&lt;div id=&quot;outline-container-sec-3-4&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-3-4&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.4&lt;/span&gt; &amp;#x7CFB;&amp;#x7EDF;&amp;#x4ECE;&amp;#x4F11;&amp;#x7720;&amp;#x4E2D;&amp;#x5524;&amp;#x9192;&amp;#x65F6;&amp;#x5237;&amp;#x65B0;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x72B6;&amp;#x6001;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-4&quot;&gt;
 &lt;p&gt;
-将下面部分代码保存为 /etc/pm/sleep.d/99touchpad
+&amp;#x5C06;&amp;#x4E0B;&amp;#x9762;&amp;#x90E8;&amp;#x5206;&amp;#x4EE3;&amp;#x7801;&amp;#x4FDD;&amp;#x5B58;&amp;#x4E3A; /etc/pm/sleep.d/99touchpad
 &lt;/p&gt;
 &lt;pre class=&quot;example&quot;&gt;
 #!/bin/sh
 # disable touchpad if more than one mouse is available
 disable_touchpad()
 {
-	/bin/sh -c &#39;DISPLAY=:0 /usr/bin/xinput --set-prop PS/2\ Generic\ TouchPad Device\ Enabled 0&#39;
+	/bin/sh -c &amp;apos;DISPLAY=:0 /usr/bin/xinput --set-prop PS/2\ Generic\ TouchPad Device\ Enabled 0&amp;apos;
 }
 
-case &quot;$1&quot; in
+case &amp;quot;$1&amp;quot; in
 	thaw|resume)
 		if [ `ls -d /sys/class/input/mouse* | wc -l` -gt 1 ]; then
 			disable_touchpad
@@ -365,57 +202,26 @@ esac
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orgheadline8&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgheadline8&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4&lt;/span&gt; Done !&lt;/h2&gt;
+&lt;div id=&quot;outline-container-sec-4&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-4&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4&lt;/span&gt; Done !&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
 &lt;p&gt;
-现在都搞定了，重启试试看看有没有什么bug吧．
+&amp;#x73B0;&amp;#x5728;&amp;#x90FD;&amp;#x641E;&amp;#x5B9A;&amp;#x4E86;&amp;#xFF0C;&amp;#x91CD;&amp;#x542F;&amp;#x8BD5;&amp;#x8BD5;&amp;#x770B;&amp;#x770B;&amp;#x6709;&amp;#x6CA1;&amp;#x6709;&amp;#x4EC0;&amp;#x4E48;bug&amp;#x5427;&amp;#xFF0E;
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;postamble&quot; class=&quot;status&quot;&gt;
-&lt;p class=&quot;date&quot;&gt;Date: &lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;span class=&quot;timestamp&quot;&gt;&amp;lt;2016-07-07 Thu&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&quot;author&quot;&gt;Author: maple&lt;/p&gt;
-&lt;p class=&quot;date&quot;&gt;Created: 2016-07-07 Thu 14:22&lt;/p&gt;
-&lt;p class=&quot;validation&quot;&gt;&lt;a href=&quot;http://validator.w3.org/check?uri=referer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Validate&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
 </content>
     
     <summary type="html">
     
-      &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
-&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://maple-zyf.github.io/2016/07/07/hello-world/"/>
-    <id>http://maple-zyf.github.io/2016/07/07/hello-world/</id>
-    <published>2016-07-07T10:26:38.111Z</published>
-    <updated>2016-07-06T03:39:02.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo server&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo generate&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo deploy&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; TouchPad Problems&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+   debian&amp;#x4E0B;&amp;#x6BCF;&amp;#x6B21;&amp;#x5F00;&amp;#x673A;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x90FD;&amp;#x662F;&amp;#x9ED8;&amp;#x8BA4;&amp;#x5F00;&amp;#x542F;&amp;#x7684;&amp;#xFF0C;&amp;#x867D;&amp;#x7136;&amp;#x53EF;&amp;#x4EE5;&amp;#x8BBE;&amp;#x7F6E;&amp;quot;disable while typing&amp;quot;
+&amp;#x4F46;&amp;#x662F;&amp;#x603B;&amp;#x6709;&amp;#x8BEF;&amp;#x89E6;&amp;#x7684;&amp;#x60C5;&amp;#x51B5;&amp;#xFF0C;xinput&amp;#x53EF;&amp;#x4EE5;&amp;#x5728;&amp;#x8F6F;&amp;#x4EF6;&amp;#x5C42;&amp;#x62E6;&amp;#x622A;&amp;#x4E8B;&amp;#x4EF6;&amp;#x6765;&amp;#x7981;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#xFF0E;&amp;#x4E3A;&amp;#x4E86;&amp;#x65B9;&amp;#x4FBF;google&amp;#x5230;&amp;#x4E86;
+&amp;#x4E00;&amp;#x4E2A;&amp;#x53EF;&amp;#x4EE5;&amp;#x6839;&amp;#x636E;&amp;#x5916;&amp;#x63A5;&amp;#x9F20;&amp;#x6807;&amp;#x63D2;&amp;#x62E8;&amp;#x4E8B;&amp;#x4EF6;&amp;#x6765;&amp;#x81EA;&amp;#x52A8;&amp;#x63A7;&amp;#x5236;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x7684;&amp;#x65B9;&amp;#x6CD5;&amp;#xFF0E;&amp;#x6211;&amp;#x7684;&amp;#x684C;&amp;#x9762;&amp;#x73AF;&amp;#x5883;&amp;#x4E3A;debian8, gnome3.
+&lt;/p&gt;
     
     </summary>
     
