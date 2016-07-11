@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://maple-zyf.github.io/"/>
-  <updated>2016-07-09T03:29:02.723Z</updated>
+  <updated>2016-07-11T03:35:05.215Z</updated>
   <id>http://maple-zyf.github.io/</id>
   
   <author>
@@ -16,15 +16,154 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>从grub-rescue恢复并配置启动本地ISO</title>
+    <link href="http://maple-zyf.github.io/2016/07/07/grub-recovery-Note/"/>
+    <id>http://maple-zyf.github.io/2016/07/07/grub-recovery-Note/</id>
+    <published>2016-07-06T16:00:00.000Z</published>
+    <updated>2016-07-11T03:35:05.215Z</updated>
+    
+    <content type="html">
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x4FEE;&amp;#x590D;grub&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+&amp;#x91CD;&amp;#x88C5;&amp;#x7CFB;&amp;#x7EDF;&amp;#x6216;&amp;#x4ECE;&amp;#x5907;&amp;#x4EFD;&amp;#x4E2D;&amp;#x6062;&amp;#x590D;&amp;#x7CFB;&amp;#x7EDF;&amp;#x5BFC;&amp;#x81F4;grub&amp;#x51FA;&amp;#x9519;&amp;#xFF0C;&amp;#x5F00;&amp;#x673A;&amp;#x8FDB;&amp;#x5165;&amp;#x4E0D;&amp;#x4E86;&amp;#x7CFB;&amp;#x7EDF;&amp;#x548C;&amp;#x6B63;&amp;#x5E38;&amp;#x7684;grub&amp;#x754C;&amp;#x9762;.
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x5F00;&amp;#x673A;&amp;#x65F6;&amp;#x663E;&amp;#x793A;:
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+error:unknow filesystem
+grub rescue&amp;gt;
+&lt;/pre&gt;
+
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;&amp;#x89E3;&amp;#x51B3;&amp;#x65B9;&amp;#x6CD5;&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
+&lt;p&gt;
+&amp;#x7528;ls&amp;#x547D;&amp;#x4EE4;&amp;#x67E5;&amp;#x770B;&amp;#x5206;&amp;#x533A;&amp;#xFF0C;&amp;#x7531;grub rescue&amp;gt;&amp;#x6062;&amp;#x590D;&amp;#x5230;grub&amp;gt;
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+grub rescue&amp;gt;ls
+(hd0) (hd0,msdos9) (hd0,msdos8) (hd0,msdos7) (hd0,msdos6) (hd0,msdos5) (hd0,msdos1)
+//&amp;#x54EA;&amp;#x4E2A;&amp;#x662F;&amp;#x4F60;&amp;#x7684;&amp;#x7CFB;&amp;#x7EDF;&amp;#x76D8;&amp;#x5462;&amp;#xFF1F;&amp;#x3000;&amp;#x8FD9;&amp;#x4E2A;&amp;#x8981;&amp;#x8BD5;&amp;#x8BD5;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x7528;Tab&amp;#x8865;&amp;#x5168;&amp;#x6765;&amp;#x770B;&amp;#x770B;&amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x4ECE;&amp;#x800C;&amp;#x627E;&amp;#x5230;&amp;#x6B63;&amp;#x786E;&amp;#x7684;&amp;#x76D8;&amp;#x53F7;.
+grub rescue&amp;gt;set root=(hd0,msdos7)
+grub rescue&amp;gt;set prefix=(hd0,msdos7)/boot/grub
+grub rescue&amp;gt;insmod /boot/grub/i386-pc/normal.mod 
+//&amp;#x542F;&amp;#x52A8;normal&amp;#x542F;&amp;#x52A8;
+&lt;/pre&gt;
+&lt;p&gt;
+&amp;#x4EE5;&amp;#x4E0A;&amp;#x547D;&amp;#x4EE4;&amp;#x6B63;&amp;#x786E;&amp;#x5219;&amp;#x4E0B;&amp;#x4E00;&amp;#x884C;&amp;#x547D;&amp;#x4EE4;&amp;#x4F1A;&amp;#x53D8;&amp;#x4E3A;&amp;#x9AD8;&amp;#x4EAE;
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+grub rescue&amp;gt;normal
+&lt;/pre&gt;
+&lt;p&gt;
+&amp;#x6B64;&amp;#x65F6;&amp;#x8FDB;&amp;#x5165;grub&amp;#x83DC;&amp;#x5355;&amp;#xFF0C;&amp;#x4F46;&amp;#x65E0;&amp;#x6CD5;&amp;#x8FDB;&amp;#x5165;&amp;#x4EFB;&amp;#x4F55;&amp;#x7CFB;&amp;#x7EDF;&amp;#x3002;
+&amp;#x8FD9;&amp;#x65F6;&amp;#xFF0C;&amp;#x8981;&amp;#x7528;&amp;#x547D;&amp;#x4EE4;&amp;#x8FDB;&amp;#x5165;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B58;&amp;#x5728;&amp;#x7684;linux&amp;#x7CFB;&amp;#x7EDF;:
+&amp;#x6309;c&amp;#x952E;&amp;#x8FDB;&amp;#x5165;&amp;#x547D;&amp;#x4EE4;&amp;#x6307;&amp;#x793A;&amp;#x7B26;&amp;#x6A21;&amp;#x5F0F;
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+grub &amp;gt;set root=hd0,msdos7
+grub &amp;gt;set prefix=(hd0,msdos7)/boot/grub
+grub &amp;gt;linux /vmlinuz-xxx-xxx root=/dev/sda7 
+//&amp;#x91CC;&amp;#x8FB9;&amp;#x7684;xxxx&amp;#x53EF;&amp;#x4EE5;&amp;#x6309;Tab&amp;#x952E;&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x6709;acpi&amp;#x95EE;&amp;#x9898;,&amp;#x5728;&amp;#x6700;&amp;#x540E;&amp;#x52A0;&amp;#x4E00;&amp;#x53E5;acpi=off
+grub &amp;gt;initrd /initrd.img-xxx-xxx
+grub &amp;gt;boot
+&lt;/pre&gt;
+&lt;p&gt;
+&amp;#x6B64;&amp;#x4EE5;&amp;#x6210;&amp;#x529F;&amp;#x542F;&amp;#x52A8;linux&amp;#x3002;
+&amp;#x5728;&amp;#x7EC8;&amp;#x7AEF;&amp;#x91CC;&amp;#x8FD0;&amp;#x884C;
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+sudo update-grub    
+//&amp;#x7528;&amp;#x8FD9;&amp;#x4E2A;&amp;#x547D;&amp;#x4EE4;,&amp;#x4E0D;&amp;#x8981;&amp;#x518D;&amp;#x7528; grub-mkconfig&amp;#x4E86;(&amp;#x603B;&amp;#x51FA;&amp;#x4E9B;/sda3  /sda6&amp;#x5206;&amp;#x4E0D;&amp;#x6E05;&amp;#x695A;&amp;#x7684;&amp;#x95EE;&amp;#x9898;).
+&amp;#x91CD;&amp;#x5EFA;grub&amp;#x5230;&amp;#x7B2C;&amp;#x4E00;&amp;#x786C;&amp;#x76D8;mbr
+sudo grub-install /dev/sda
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;&amp;#x7528;grub&amp;#x76F4;&amp;#x63A5;&amp;#x542F;&amp;#x52A8;iso&amp;#x955C;&amp;#x50CF;&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
+&lt;p&gt;
+step1: debian&amp;#x4E0A;&amp;#x5B89;&amp;#x88C5;grub-imageboot( &amp;#x4F1A;&amp;#x81EA;&amp;#x52A8;&amp;#x751F;&amp;#x6210;&amp;#x4E00;&amp;#x4E2A;/boot/memdisk )
+&lt;code&gt;&amp;#x6216;&amp;#x8005;&amp;#x662F;&amp;#x4E0B;&amp;#x8F7D;syslinux&amp;#x5305; &amp;#x627E;&amp;#x5230;&amp;#x91CC;&amp;#x8FB9;&amp;#x7684;memdisk&amp;#x590D;&amp;#x5236;&amp;#x5230;/boot&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+step2: &amp;#x5728;/etc/grub.d/40&lt;sub&gt;custom&lt;/sub&gt; &amp;#x6DFB;&amp;#x52A0;&amp;#xFF1A;
+&amp;#x4E0B;&amp;#x8FB9;&amp;#x662F;&amp;#x6211;&amp;#x81EA;&amp;#x5DF1;&amp;#x7684;&amp;#x914D;&amp;#x7F6E;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;memdisk&amp;#x5728;sda3, &amp;#x800C;iso&amp;#x6587;&amp;#x4EF6;&amp;#x5728;sda1.
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+menuentry &amp;quot;Load Rescue.iso&amp;quot; {
+  echo &amp;apos;Loading Memdisk...&amp;apos;
+  linux16 (hd0,3)/boot/memdisk iso raw
+	echo &amp;apos;Loading ISO...&amp;apos;
+  initrd16 (hd0,6)/zengyingfeng/c_language/linux_C/ISO/Rescue.iso
+}
+menuentry &amp;quot;Load ubuntu-live.iso&amp;quot; {
+  set root=(hd0,6)
+  loopback loop /zengyingfeng/c_language/linux_C/ISO/ubuntu-12.04.4-desktop-i386.iso
+  linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=/zengyingfeng/c_language/linux_C/ISO/ubuntu-12.04.4-desktop-i386.iso
+  initrd (loop)/casper/initrd.lz
+}
+&lt;/pre&gt;
+&lt;p&gt;
+step3: &amp;#x7528;grub&amp;#x5C06;&amp;#x65B0;&amp;#x7684;&amp;#x914D;&amp;#x7F6E;&amp;#x5199;&amp;#x5165;MBR
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+sudo update-grub
+Found memdisk: /boot/memdisk
+Imagepath /boot/images not found
+done
+//&amp;#x8FD9;&amp;#x6837;&amp;#x7684;&amp;#x56DE;&amp;#x663E;&amp;#x662F;&amp;#x6B63;&amp;#x5E38;&amp;#x7684;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;&amp;#x4FEE;&amp;#x590D;grub&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
+&lt;p&gt;
+&amp;#x91CD;&amp;#x88C5;&amp;#x7CFB;&amp;#x7EDF;&amp;#x6216;&amp;#x4ECE;&amp;#x5907;&amp;#x4EFD;&amp;#x4E2D;&amp;#x6062;&amp;#x590D;&amp;#x7CFB;&amp;#x7EDF;&amp;#x5BFC;&amp;#x81F4;grub&amp;#x51FA;&amp;#x9519;&amp;#xFF0C;&amp;#x5F00;&amp;#x673A;&amp;#x8FDB;&amp;#x5165;&amp;#x4E0D;&amp;#x4E86;&amp;#x7CFB;&amp;#x7EDF;&amp;#x548C;&amp;#x6B63;&amp;#x5E38;&amp;#x7684;grub&amp;#x754C;&amp;#x9762;.
+&lt;/p&gt;
+
+&lt;p&gt;
+&amp;#x5F00;&amp;#x673A;&amp;#x65F6;&amp;#x663E;&amp;#x793A;:
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+error:unknow filesystem
+grub rescue&amp;gt;
+&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="linux-configure" scheme="http://maple-zyf.github.io/categories/linux-configure/"/>
+    
+    
+      <category term="linux" scheme="http://maple-zyf.github.io/tags/linux/"/>
+    
+      <category term="grub" scheme="http://maple-zyf.github.io/tags/grub/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用外接鼠标的插拨来自动禁启用触摸板</title>
     <link href="http://maple-zyf.github.io/2016/07/07/touchpadDisable-Note/"/>
     <id>http://maple-zyf.github.io/2016/07/07/touchpadDisable-Note/</id>
     <published>2016-07-06T16:00:00.000Z</published>
-    <updated>2016-07-09T03:29:02.723Z</updated>
+    <updated>2016-07-11T03:34:19.103Z</updated>
     
-    <content type="html">
-&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; TouchPad Problems&lt;/h2&gt;
+    <content type="html">&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Touchpad Problems&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
 &lt;p&gt;
    debian&amp;#x4E0B;&amp;#x6BCF;&amp;#x6B21;&amp;#x5F00;&amp;#x673A;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x90FD;&amp;#x662F;&amp;#x9ED8;&amp;#x8BA4;&amp;#x5F00;&amp;#x542F;&amp;#x7684;&amp;#xFF0C;&amp;#x867D;&amp;#x7136;&amp;#x53EF;&amp;#x4EE5;&amp;#x8BBE;&amp;#x7F6E;&amp;quot;disable while typing&amp;quot;
@@ -35,7 +174,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-2&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2&lt;/span&gt; Conception&lt;/h2&gt;
+&lt;h2 id=&quot;sec-2&quot;&gt;Conception&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
 &lt;p&gt;
 &amp;#x5148;&amp;#x67E5;&amp;#x770B;&amp;#x8F93;&amp;#x5165;&amp;#x8BBE;&amp;#x5907;&amp;#xFF1A;
@@ -93,7 +232,7 @@ Device &amp;apos;ETPS/2 Elantech Touchpad&amp;apos;:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-sec-3&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-3&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;3&lt;/span&gt; Hacking TouchPad En/Disable with Mouse&lt;/h2&gt;
+&lt;h2 id=&quot;sec-3&quot;&gt;Hacking TouchPad En/Disable with Mouse&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-3&quot;&gt;
 &lt;p&gt;
 &amp;#x8981;&amp;#x8BA9;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x5728;&amp;#x4EFB;&amp;#x4F55;&amp;#x65F6;&amp;#x5019;&amp;#x90FD;&amp;#x53D7;&amp;#x9F20;&amp;#x6807;&amp;#x63A7;&amp;#x5236;&amp;#xFF0C;&amp;#x6709;&amp;#x4E09;&amp;#x4E2A;&amp;#x65B9;&amp;#x9762;&amp;#x9700;&amp;#x8981;&amp;#x8003;&amp;#x8651;&amp;#xFF0E;
@@ -101,7 +240,7 @@ Device &amp;apos;ETPS/2 Elantech Touchpad&amp;apos;:
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-sec-3-1&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;sec-3-1&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.1&lt;/span&gt; gdm&amp;#x767B;&amp;#x9646;&amp;#x9875;&amp;#x9762;&lt;/h3&gt;
+&lt;h3 id=&quot;sec-3-1&quot;&gt;gdm&amp;#x767B;&amp;#x9646;&amp;#x9875;&amp;#x9762;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-1&quot;&gt;
 &lt;p&gt;
    &amp;#x5F00;&amp;#x673A;&amp;#x540E;(&amp;#x8FDB;&amp;#x5165;gdm&amp;#x767B;&amp;#x9646;&amp;#x754C;&amp;#x9762;&amp;#x65F6;)&amp;#x6839;&amp;#x636E;&amp;#x662F;&amp;#x5426;&amp;#x6709;&amp;#x5916;&amp;#x63A5;&amp;#x9F20;&amp;#x6807;&amp;#x6765;&amp;#x63A7;&amp;#x5236;&amp;#x4E00;&amp;#x6B21;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x72B6;&amp;#x6001;&amp;#xFF0E;
@@ -121,7 +260,7 @@ fi
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-sec-3-2&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;sec-3-2&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.2&lt;/span&gt; gnome3&amp;#x684C;&amp;#x9762;&lt;/h3&gt;
+&lt;h3 id=&quot;sec-3-2&quot;&gt;gnome3&amp;#x684C;&amp;#x9762;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
 &lt;p&gt;
    &amp;#x7531;gmd&amp;#x8FDB;&amp;#x5165;gnome3&amp;#x540E;&amp;#x53D1;&amp;#x73B0;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x5C45;&amp;#x7136;&amp;#x53C8;&amp;#x80FD;&amp;#x7528;&amp;#x4E86;&amp;#xFF0C;&amp;#x8FD9;&amp;#x4E2A;&amp;#x65F6;&amp;#x7684;&amp;#x89E3;&amp;#x51B3;&amp;#x65B9;&amp;#x6CD5;&amp;#x662F;&amp;#x7528;autostart&amp;#x81EA;&amp;#x542F;&amp;#x52A8;&amp;#x9879;&amp;#xFF0E;
@@ -151,7 +290,7 @@ Comment=&amp;#x7981;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-sec-3-3&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;sec-3-3&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.3&lt;/span&gt; &amp;#x7528;&amp;#x9F20;&amp;#x6807;&amp;#x63D2;&amp;#x62E8;&amp;#x4E8B;&amp;#x4EF6;&amp;#x6765;&amp;#x7981;/&amp;#x542F;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&lt;/h3&gt;
+&lt;h3 id=&quot;sec-3-3&quot;&gt;&amp;#x7528;&amp;#x9F20;&amp;#x6807;&amp;#x63D2;&amp;#x62E8;&amp;#x4E8B;&amp;#x4EF6;&amp;#x6765;&amp;#x7981;/&amp;#x542F;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-3&quot;&gt;
 &lt;p&gt;
 &amp;#x5728;&amp;#x7CFB;&amp;#x7EDF;&amp;#x89C4;&amp;#x5219;&amp;#x4E2D;&amp;#x4E3A;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x6DFB;&amp;#x52A0;&amp;#x4E00;&amp;#x6761;&amp;#x89C4;&amp;#x5219;&amp;#x547D;&amp;#x540D;&amp;#x4E3A; /etc/udev/rules.d/61-touchpad.rules
@@ -176,7 +315,7 @@ Comment=&amp;#x7981;&amp;#x7528;&amp;#x89E6;&amp;#x6478;&amp;#x677F;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-sec-3-4&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;sec-3-4&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.4&lt;/span&gt; &amp;#x7CFB;&amp;#x7EDF;&amp;#x4ECE;&amp;#x4F11;&amp;#x7720;&amp;#x4E2D;&amp;#x5524;&amp;#x9192;&amp;#x65F6;&amp;#x5237;&amp;#x65B0;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x72B6;&amp;#x6001;&lt;/h3&gt;
+&lt;h3 id=&quot;sec-3-4&quot;&gt;&amp;#x7CFB;&amp;#x7EDF;&amp;#x4ECE;&amp;#x4F11;&amp;#x7720;&amp;#x4E2D;&amp;#x5524;&amp;#x9192;&amp;#x65F6;&amp;#x5237;&amp;#x65B0;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x72B6;&amp;#x6001;&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-4&quot;&gt;
 &lt;p&gt;
 &amp;#x5C06;&amp;#x4E0B;&amp;#x9762;&amp;#x90E8;&amp;#x5206;&amp;#x4EE3;&amp;#x7801;&amp;#x4FDD;&amp;#x5B58;&amp;#x4E3A; /etc/pm/sleep.d/99touchpad
@@ -203,7 +342,7 @@ esac
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-sec-4&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-4&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;4&lt;/span&gt; Done !&lt;/h2&gt;
+&lt;h2 id=&quot;sec-4&quot;&gt;Done !&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-4&quot;&gt;
 &lt;p&gt;
 &amp;#x73B0;&amp;#x5728;&amp;#x90FD;&amp;#x641E;&amp;#x5B9A;&amp;#x4E86;&amp;#xFF0C;&amp;#x91CD;&amp;#x542F;&amp;#x8BD5;&amp;#x8BD5;&amp;#x770B;&amp;#x770B;&amp;#x6709;&amp;#x6CA1;&amp;#x6709;&amp;#x4EC0;&amp;#x4E48;bug&amp;#x5427;&amp;#xFF0E;
@@ -215,7 +354,7 @@ esac
     <summary type="html">
     
       &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; TouchPad Problems&lt;/h2&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Touchpad Problems&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
 &lt;p&gt;
    debian&amp;#x4E0B;&amp;#x6BCF;&amp;#x6B21;&amp;#x5F00;&amp;#x673A;&amp;#x89E6;&amp;#x6478;&amp;#x677F;&amp;#x90FD;&amp;#x662F;&amp;#x9ED8;&amp;#x8BA4;&amp;#x5F00;&amp;#x542F;&amp;#x7684;&amp;#xFF0C;&amp;#x867D;&amp;#x7136;&amp;#x53EF;&amp;#x4EE5;&amp;#x8BBE;&amp;#x7F6E;&amp;quot;disable while typing&amp;quot;
@@ -225,7 +364,7 @@ esac
     
     </summary>
     
-      <category term="linuxconfigure" scheme="http://maple-zyf.github.io/categories/linuxconfigure/"/>
+      <category term="linux-configure" scheme="http://maple-zyf.github.io/categories/linux-configure/"/>
     
     
       <category term="linux" scheme="http://maple-zyf.github.io/tags/linux/"/>
@@ -239,13 +378,25 @@ esac
     <link href="http://maple-zyf.github.io/2015/11/15/first/"/>
     <id>http://maple-zyf.github.io/2015/11/15/first/</id>
     <published>2015-11-15T09:00:00.000Z</published>
-    <updated>2016-07-09T05:34:59.695Z</updated>
+    <updated>2016-07-11T01:27:15.415Z</updated>
     
-    <content type="html">&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; Orgmode&lt;/h2&gt;
+    <content type="html">&lt;div id=&quot;table-of-contents&quot;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&quot;text-table-of-contents&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-1&quot;&gt;Orgmode&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-1-1&quot;&gt;Why org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;sec-1&quot;&gt;Orgmode&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
 &lt;/div&gt;&lt;div id=&quot;outline-container-sec-1-1&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;sec-1-1&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;1.1&lt;/span&gt; Why org&lt;/h3&gt;
+&lt;h3 id=&quot;sec-1-1&quot;&gt;Why org&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-1-1&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 
@@ -258,9 +409,13 @@ esac
     
     <summary type="html">
     
-      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; Orgmode&lt;/h2&gt;
-&lt;div class=&quot;outline
+      &lt;div id=&quot;table-of-contents&quot;&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id=&quot;text-table-of-contents&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#sec-1&quot;&gt;Orgmode&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a 
     
     </summary>
     
